@@ -3,7 +3,7 @@
 import csv
 
 
-file = 'C:\\Users\\hgfow\\Desktop\\python-challenge\\PyPoll\\election_data.csv'
+file = 'C:\\Users\\hgfow\\Desktop\\election_data.csv'
 
 #Hold values for variables
 voter = [0]
