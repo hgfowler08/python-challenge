@@ -8,7 +8,7 @@ import csv
 
 file = 'budget_data.csv'
 #Create path to collect data from the folder
-#budgetCSV = os.path.join('..\\PyBank\\budget_data.csv')
+#budgetCSV = os.path.join('..\\Desktop\\budget_data.csv')
 
 #Hold values for variables
 date = []
@@ -43,14 +43,14 @@ with open(file, 'r') as f:
         netRev += revenue[x]
 #Find average change in profit/loss between months over the total period
     totalChange = int()
-    for x in range(0, len(revenue) - 1):
+    for x in range(len(revenue) - 1):
         totalChange += (revenue[x+1] - revenue[x])
     
     
 #Find greatest increase in profits (date and amount) over total period
-    greatestincrease = (revenue)
-    for x in range(0, len(revenue)):
-        greatestincrease += max(revenue[x + 1] - revenue[x])
+    #greatestincrease = (revenue)
+    #for x in range(0, len(revenue)):
+        #greatestincrease = revenue[x + 1] - revenue[x]
     
 
 #Find greatest decreases in losses (date and amount) over total period
@@ -60,7 +60,7 @@ with open(file, 'r') as f:
 print("Total Months:" + str(totalMonths))
 print("Total:" + str(netRev))
 print("Average Change:" + str(totalChange))
-print("Greatest Increase in Profits:" + date + str(greatestincrease))
+#print("Greatest Increase in Profits:" + date + str(greatestincrease))
 
 output = "pybank.csv"
 
